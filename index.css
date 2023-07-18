@@ -18,7 +18,7 @@ nav {
   justify-content: space-between;
   padding: 4px 1rem;
   border: 2px solid;
-  margin: 4px 1%;
+  margin: 0.1px 1%;
   background: #d4b6b6;
 }
 
@@ -101,12 +101,13 @@ input {
   list-style: disc;
   gap: 2px;
   padding-left: 1rem;
+  font-size: 0.9em;
 }
 
 footer {
   padding: 4px 1rem;
   border: 2px solid;
-  margin: 2px 1%;
+  margin: 0.1px 1%;
   position: fixed;
   bottom: 0;
   left: 14%;

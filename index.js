@@ -1,7 +1,8 @@
 import {
-  bookTitle, bookAuthor, button, newBooks, navList, theDate, today, sections,
+  bookTitle, bookAuthor, button, newBooks, navList, theDate, sections,
 } from './modules/variables.js';
 import Book from './modules/addRemoveBook.js';
+import { DateTime } from './modules/luxon.js';
 
 const shelf = new Book();
 shelf.saveStorage();
@@ -9,7 +10,7 @@ shelf.saveStorage();
 button.addEventListener('click', (e) => {
   e.preventDefault();
 
-	const title = bookTitle.value;
+  const title = bookTitle.value;
   const author = bookAuthor.value;
 
   if (!title || !author) return;
@@ -25,9 +26,10 @@ newBooks.addEventListener('click', (e) => {
 });
 
 navList.addEventListener('click', (e) => {
-	const { main } = e.target.dataset;
+  const { main } = e.target.dataset;
   sections.forEach((link) => link.classList.remove('display'));
   document.querySelector(`.main${main}`).classList.add('display');
 });
 
-theDate.textContent = today.toUTCString();
+const now = DateTime.now();
+theDate.textContent = now.toLocaleString(DateTime.DATETIME_MED);

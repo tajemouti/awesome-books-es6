@@ -4,9 +4,8 @@ const button = document.getElementById('add-btn');
 const newBooks = document.getElementById('new-books');
 const navList = document.getElementById('nav-list');
 const theDate = document.getElementById('date');
-const today = new Date();
 const sections = document.querySelectorAll('.main');
 
 export {
-  bookTitle, bookAuthor, button, newBooks, navList, theDate, today, sections,
+  bookTitle, bookAuthor, button, newBooks, navList, theDate, sections,
 };
